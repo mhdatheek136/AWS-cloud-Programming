@@ -1,0 +1,17 @@
+region = "us-east-2"
+ami = "ami-0c20d88b0021158c6"
+instance_type = "t2.micro"
+key_name = "main-key"
+security_group_name = "allow_web_traffic"
+security_group_description = "Allow Web inbound traffic"
+cidr_blocks = ["0.0.0.0/0"]
+lb_name = "webpage-lb"
+tg_name = "webpage-tg"
+port = 80
+asg_name = "webpage_asg"
+availability_zones = ["us-east-2a", "us-east-2b", "us-east-2c"]
+desired_capacity = 2
+max_size = 4
+min_size = 2
+asg_policy_name = "webpage_autoscaling_policy"
+target_value = 70
